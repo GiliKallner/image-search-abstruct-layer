@@ -20,7 +20,7 @@ exports.create_image = function(search,page=1){
            return {
               url: img.link,
               title: img.title,
-              page_url: `https://imgur.com/${img.id}`
+              'page url': `https://imgur.com/${img.id}`
            };
          });
        resolve(images);
