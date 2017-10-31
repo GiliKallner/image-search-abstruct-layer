@@ -1,12 +1,14 @@
-const request = require('request');
 
 const express = require('express');
+const imgur = require('./services/imgur.js');
+
 const app = express();
 
 
 app.use(express.static('public'));
 
 app.get("/", function (request, response) {
+  console.log(imgur.create_image('puppies'));
   response.sendFile(__dirname + '/views/index.html');
 });
 
