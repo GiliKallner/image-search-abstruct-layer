@@ -12,8 +12,8 @@ router.get('/latest', (req, res) => {
 
 router.get('/search/:q', (req, res) => {
   imgur.create_image(req.params.q, req.query.offset).then(ans => {
-    ans = JSON.stringify(ans,null,' ');
-    res.json(ans);
+    //ans = JSON.stringify(ans,null,4);
+    res.send(ans);
   })
   
 });
