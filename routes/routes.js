@@ -5,7 +5,7 @@ const imgur = require('../services/imgur.js');
 
 router.get('/', (req, res) => {
  // res.sendFile(__dirname + './views/index.html');
-res.send('hello');
+res.render('index.html');
 });
 
 router.get('/latest', (req, res) => {
