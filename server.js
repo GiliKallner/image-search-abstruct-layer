@@ -11,10 +11,6 @@ app.get("/", function (request, response) {
 });
 
 
-app.post("/dreams", function (request, response) {
-  response.sendStatus(200);
-});
-
 
 
 // listen for requests :)
