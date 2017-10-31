@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const imgur = require('../../services/imgur.js');
+const imgur = require('./public/client.js');
 
 router.get('/', (req, res) => {
-  res.sendFile(__dirname + '/views/index.html');
+ // res.sendFile(__dirname + '/views/index.html');
+res.send('hello');
 });
 
 router.get('/latest', (req, res) => {
