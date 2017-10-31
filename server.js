@@ -1,7 +1,12 @@
 
 var express = require('express');
 var app = express();
+var imageSearch = require('node-google-image-search');
+var results = imageSearch('dog', callback, 0, 5);
 
+function callback(results) {
+  console.log(results);
+}
 
 app.use(express.static('public'));
 
