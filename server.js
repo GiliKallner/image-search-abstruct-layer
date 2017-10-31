@@ -1,11 +1,7 @@
 
 var express = require('express');
 var app = express();
-const GoogleImages = require('google-images');
-const client = new GoogleImages(process.env.CSE_ID,process.env.CSE_API_KEY);
-client.search('cat').then(images =>{
-  console.log(images);
-});
+
 
 
 app.use(express.static('public'));
