@@ -2,7 +2,7 @@
 const express = require('express');
 
 const app = express();
-const routes = require('./routes/index.js');
+const routes = require('./routes.js');
 
 app.use('/', routes);
 
