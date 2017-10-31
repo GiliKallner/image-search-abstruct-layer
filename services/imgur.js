@@ -1,7 +1,7 @@
 const request = require('request');
 
-exports.create_image = function(search,page=1){ 
-  return new Promise((resolve,reject)=>{
+exports.create_image = (search,page=1) => { 
+  return new Promise((resolve,reject) => {
       
     let options = {
         url: `https://api.imgur.com/3/gallery/search/${page}?q=${search}`,
@@ -11,7 +11,7 @@ exports.create_image = function(search,page=1){
     
      let getPic = (err,res,body)=>{
        
-       if(err||res.statusCode!==200) {reject(err);}
+       if(err||res.statusCode!==200) { reject(err);}   //reject
        
        let images = body.data.filter(img =>{
          
@@ -23,8 +23,11 @@ exports.create_image = function(search,page=1){
               'page url': `https://imgur.com/${img.id}`
            };
          });
-       resolve(images);
+       
+       resolve(images);     //resolve
      };
-   request(options,getPic);  
+    
+     return request(options,getPic);
+    
  });
 }
