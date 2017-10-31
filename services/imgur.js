@@ -1,6 +1,6 @@
 const request = require('request');
 
-module.exports.create_image = (search,page=1)=> { 
+exports.create_image = function(search,page=1){ 
   return new Promise((resolve,reject)=>{
       
     let options = {
@@ -10,8 +10,11 @@ module.exports.create_image = (search,page=1)=> {
       };
     
      let getPic = (err,res,body)=>{
+       
        if(err||res.statusCode!==200) {reject(err);}
+       
        let images = body.data.filter(img =>{
+         
          if(!img.is_album) return img;})
          .map(img => {
            return {
@@ -22,6 +25,6 @@ module.exports.create_image = (search,page=1)=> {
          });
        resolve(images);
      };
-  return request(options,getPic);  
+   request(options,getPic);  
  });
 }
