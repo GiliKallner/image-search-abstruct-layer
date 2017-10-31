@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 const GoogleImages = require('google-images');
 const client = new GoogleImages(process.env.CSE_ID,process.env.CSE_API_KEY);
-client.search('dog',{page:1}).then(images =>{
+client.search('dog').then(images =>{
   console.log(images);
 });
 
