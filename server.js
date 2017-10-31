@@ -2,11 +2,11 @@
 const express = require('express');
 
 const app = express();
-const routes = require('./lib/routes.js');
+const routes = require('./routes/routes.js');
 
 app.use('/', routes);
 
-//app.use(express.static('public'));
+app.use(express.static('public'));
 
 // listen for requests :)
 const listener = app.listen(process.env.PORT, function () {
