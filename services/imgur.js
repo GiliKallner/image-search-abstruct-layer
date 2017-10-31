@@ -1,6 +1,6 @@
 const request = require('request');
 
-exports.create_image = (search,page=1)=> { 
+module.exports.create_image = (search,page=1)=> { 
   return new Promise((resolve,reject)=>{
       
     let options = {
