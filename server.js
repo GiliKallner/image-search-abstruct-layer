@@ -1,19 +1,12 @@
 
 const express = require('express');
-const imgur = require('./services/imgur.js');
 
 const app = express();
+const routes = require('./routes/index.js');
 
+app.use('/', routes);
 
 app.use(express.static('public'));
-
-app.get("/", function (request, response) {
-  console.log(imgur.create_image('puppies'));
-  response.sendFile(__dirname + '/views/index.html');
-});
-
-
-
 
 // listen for requests :)
 const listener = app.listen(process.env.PORT, function () {
