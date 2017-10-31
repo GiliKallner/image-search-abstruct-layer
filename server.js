@@ -1,12 +1,12 @@
 
 var express = require('express');
 var app = express();
-var imageSearch = require('node-google-image-search');
-var results = imageSearch('dog', callback, 0, 5);
+const GoogleImages = require('google-images');
+const client = new GoogleImages(process.env.CSE_ID,process.env.CSE_API_KEY);
+client.search('dog',{page:1}).then(images =>{
+  console.log(images);
+});
 
-function callback(results) {
-  console.log(results);
-}
 
 app.use(express.static('public'));
 
