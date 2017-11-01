@@ -8,11 +8,17 @@
   box-sizing: border-box;
 }
 
+.container{
+  margin-top:6%;
+}
 p.flow-text {
-  font-size:1.5em; 
-  text-align:justify;
+  font-size:1.3em; 
 }
 header{
   border-bottom: 1px solid #ddd;
   box-shadow: 0 1px 0 0 #ddd;
+}
+footer{
+  padding:1em;
+  font-size:1.2em;
 }
