@@ -10,9 +10,10 @@ router.get('/', (req, res) => {
 });
 
 router.get('/latest', (req, res) => {
-  let cur = history.find({},'name date -_id');
-  console.log(cur);
-   //res.send(cur);
+    let cur = history.find({},'name date -_id').sort('-date').limit(10).then(results=>{
+      res.setHeader('Content-Type', 'application/json');
+      res.send(JSON.stringify(results,null,3));
+  })
 });
 
 router.get('/search/:q', (req, res) => {
