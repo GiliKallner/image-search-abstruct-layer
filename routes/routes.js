@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/latest', (req, res) => {
-    let cur = history.find({},' -_id').sort({date:-1}).limit(10).then(results=>{
+    let cur = history.find({},'name date -_id').sort({date:-1}).limit(10).then(results=>{
       res.setHeader('Content-Type', 'application/json');
       res.send(JSON.stringify(results,null,3));
   })
