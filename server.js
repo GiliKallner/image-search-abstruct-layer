@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const routes = require('./routes/routes.js');
 const mongoose = require('mongoose');
-const mongo = require('mongodb').MongoClient;
+const mongo = require('mongodb');
 
 mongoose.connect(process.env.MONGOLAB_URI);
 mongoose.Promise = global.Promise;
