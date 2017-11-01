@@ -13,6 +13,6 @@ p.flow-text {
   text-align:justify;
 }
 header{
-  border-bottom: 1px solid #777;
-  box-shadow: 0 1px 0 0 #777 ;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 1px 0 0 #ddd;
 }
