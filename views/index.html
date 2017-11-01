@@ -18,18 +18,25 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
   </head>
-  <body class="center-align">
+  <body class="center-align container">
     <header>
-      <h2>Image Search Abstraction Layer in Imgur Data Base</h2>
+      <h2>Image Search Abstraction Layer in Imgur Api</h2>
     </header>
 
     <main>     
       <section>
-        <p class="flow-text">
-          In order to use this app, you must specify a new url adress at the url inbox at the top of this page./n
-          If you want to view some images content, add the '/search/' to the end of this adress and the term you want/n
-          to withdraw from the database right afterwords. You can also specify the page you want to view by adding the offset/n
-          term and set it to t        </p>
+        <p>
+          To use this app, you must specify a new url adress at the url inbox at the top of this page.
+          <br/><br/>
+          If you want to view some images content, add the '/search/' to the end of this adress and the term you want
+          to withdraw from the database right afterwords. You can also specify the page you want to view by adding the offset
+          term and set it to the page number you want to view. 
+          For example, the adress https://imagesrc.glitch.me/search/puppies?offset=3 will return results of puppies images that are
+          displayed in page number 3 in the Api.
+          <br/><br/>
+          To view the latest 10 searches in this app, simply add /latest to the url adress above. The complete url adress will 
+          then look like https://imagesrc.glitch.me/latest.
+        </p>
       </section>
     </main>
 

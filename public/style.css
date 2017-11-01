@@ -7,3 +7,7 @@
 * {
   box-sizing: border-box;
 }
+
+main>section>p {
+  font-size:30px !important
+}
