@@ -10,13 +10,15 @@ router.get('/', (req, res) => {
 });
 
 router.get('/latest', (req, res) => {
-  
+  let cur = history.find({},'name date -_id');
+  console.log(cur);
+   //res.send(cur);
 });
 
-router.get('/search/:query', (req, res) => {
-  imgur.create_image(req.params.query, req.query.offset).then(ans => {
+router.get('/search/:q', (req, res) => {
+  imgur.create_image(req.params.q, req.query.offset).then(ans => {
     
-    new history({ name:req.params.query, date: new Date().now() }).save();
+    new history({ name:req.params.q }).save();
     
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify(ans,null,3));
