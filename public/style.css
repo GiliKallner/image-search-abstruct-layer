@@ -8,9 +8,11 @@
   box-sizing: border-box;
 }
 
-p {
-  font-size:50px; 
+p.flow-text {
+  font-size:1.5em; 
+  text-align:justify;
 }
-body{
-  background-color:black;
+header{
+  border-bottom: 1px solid #777;
+  box-shadow: 0 1px 0 0 #777 ;
 }
